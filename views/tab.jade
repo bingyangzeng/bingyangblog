@@ -1,0 +1,23 @@
+extends layout
+block content
+  div(class="container")
+   h1(class="page-header")选项卡
+   div(class="tabbable tabs-left")
+    ul(class="nav nav-tabs ")
+     li(class="active")
+      a(href="#tab1",data-toggle="tab") one
+     li
+      a(href="#tab2",data-toggle="tab") two
+     li
+      a(href="#tab3",data-toggle="tab") three
+    div(class="tab-content")
+     div(class="tab-pane active",id="tab1")
+      p wordpress,优雅的CMS
+     div(class="tab-pane ",id="tab2")
+      p drupal,优雅的CMS
+     div(class="tab-pane ",id="tab3")
+      p joomla,优雅的CMS
+  script(src="/javascripts/jquery-1.11.1.min.js")
+  script(src="/javascripts/bootstrap.min.js")
+  script(src="/javascripts/prettify.js")
+  script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")

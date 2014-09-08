@@ -1,0 +1,136 @@
+extends layout
+
+block content
+  
+  div(class="container-fluid")
+   h1(class="page-header")= title 
+    small 使用Bootstrap网格系统布局网页
+   p Welcome to #{title}
+   div(class="row-fluid")
+    div(class="span4 ")
+     h1(class="page-header") 表单
+     div(class="btn-toolbar")
+      div(class="btn-group")
+       a(class="btn dropdown-toggle",data-toggle="dropdown",href="#") 字体 
+        span(class="caret")
+       ul(class="dropdown-menu")
+        li <a href="#"> 黑体</a>
+        li <a href="#"> 宋体</a>
+        li <a href="#"> 隶书</a>
+     div(class="btn-toolbar")
+      div(class="btn-group")
+       a(class="btn") 字体
+       a(class="btn dropdown-toggle",data-toggle="dropdown",href="#")  
+        span(class="caret")
+       ul(class="dropdown-menu")
+        li <a href="#"> 黑体</a>
+        li <a href="#"> 宋体</a>
+        li <a href="#"> 隶书</a>
+     div(class="btn-toolbar")
+      div(class="btn-group")
+       button(class="btn") 左边齐
+       button(class="btn") 居中
+       button(class="btn") 右边齐
+      div(class="btn-group")
+       button(class="btn") 左边齐
+       button(class="btn") 居中
+       button(class="btn") 右边齐
+     a(class="btn  btn-large") 
+      i(class="icon-comment icon-white") 
+      查看评论
+     a(class="btn  btn-large") 
+      i(class="icon-shopping-cart") 
+      结帐
+     form(class="form-horizontal")
+      fieldset
+       legend 用户登录
+       div(class="control-group")
+        label(class="control-label",for="username") 用户名
+        div(class="controls")
+         input(id="username",type="text")
+         p(class="help-block") 请输入用户名
+       div(class="control-group")
+        label(class="control-label",for="password") 密码
+        div(class="controls")
+         input(id="password",type="password")
+         p(class="help-block") 请输入密码
+      div(class="form-actions")
+       button(type="submit",class="btn btn-primary") 登录
+       button(type="submit",class="btn btn-info") 登录
+       button(type="submit",class="btn btn-success") 登录
+       button(type="submit",class="btn btn-large") 登录
+       button(type="submit",class="btn btn-small") 登录
+       button(type="submit",class="btn btn-mini btn-warning") 登录
+       button(type="submit",class="btn btn-mini btn-danger") 登录
+       button(type="submit",class="btn btn-mini btn-inverse") 登录
+     label(class="radio") 男
+      input(type="radio",name="gender",value="male") 
+     label(class="checkbox inline") 男
+      input(type="checkbox",name="cmsa",value="1")
+     label(class="checkbox inline") 女
+      input(type="checkbox",name="cmsa",value="2")
+     label(for="somewhere",class="select") 想去的地方
+     select(id="somewhere")
+      option(value="italy") 意大利
+      option(value="us") 美国 
+      option(value="uk") 英国
+     label(for="username") 用户名
+     input(id="username",type="text",placeholder="请输入你的用户名",class="span8")
+     span(class="help-block")输入用户
+     div(class="input-prepend input-append")
+      span(class="add-on") &yen;
+      input(type="text")
+      span(class="add-on") .00
+     table(class="table table-condensed table-bordered table-striped")
+      thead
+       tr
+        th *
+        th 下载量
+        th 图书出版
+        th 外连数 
+      tr
+       th *
+       th 63438
+       th 83
+       th 8332.67
+      tr
+       th wordpress
+       th 63438
+       th 83
+       th 8332.67
+     code &lt;h1&gt;
+     pre(clsss="prettyprint linenums") &lt;h1&gt;&lt;h1&gt;&lt;h1&gt;&lt;h1&gt;&lt;h1&gt;&lt;h1&gt;&lt;h1&gt;&lt;h1&gt;&lt;h1&gt;&lt;h1&gt;&lt;h2 class="page-header"&gt;区块一&lt;/h2&gt;&lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;<br> &lt;div class="span4 hidden-phone"&gt;&lt;h2 class="page-header "&gt;区块二&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;dangwoshuowomeiyouqiandeshihuotajiuhuizouledangwoshuowomeiyouqiandeshihuotajiuhuizouledangwoshuowomeiyouqiandeshihuotajiuhuizouledangwoshuowomeiyouqiandeshihuotajiuhuizoule&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
+     ul
+      li Drupal
+      li joomla 
+      li wordpress 
+     h2 有序
+     ol
+      li Drupal
+      li joomal
+      li  wordpress
+     h2 描述列表
+     dl(class="dl-horizontal")
+      dt drupal
+      dd qiangda
+     p 
+      abbr(class="initialism",title="content mangage system ") cms 
+       meiyourenzoujinlewodeshengmingnobodymeiyourenzoujinlewodeshengmingnobodymeiyourenzoujinlewodeshengmingnobodymeiyourenzoujinlew
+      strong odeshengmingnobodymeiyourenzoujinlewodeshengmingnobodymeiyourenzoujinlewodeshengmingnobodymeiyourenzoujinlewodeshengmingnobodymeiyourenzoujinlewodeshengmingnobodymeiyourenzoujinlewodeshengmingnobodymeiyourenzoujinlewodeshengmingn
+      em obodymeiyourenzoujinlewodeshengmingnobodymeiyourenzoujinlewodeshengmingnobody
+    div(class="span4 hidden-phone")
+     h2(class="page-header ") 区块二
+     blockquote 
+      p dangwoshuowomeiyouqiandeshihuotajiuhuizouledangwoshuowomeiyouqiandeshihuotajiuhuizouledangwoshuowomeiyouqiandeshihuotajiuhuizouledangwoshuowomeiyouqiandeshihuotajiuhuizoule
+    div(class="span4 visible-desktop")
+     h2(class="page-header") 区块三
+     p xiaoqunshuodehuawobuxiangxin
+     div(class="row-fluid")
+      div(class="span6") xiaoqunshuodehuawobuxiangxindddddddddddddddddddddddddddddddd
+      div(class="span6") xiaoqunshuodehuawobuxiangxinddddddddddddddddddddddddddddddddddd
+   
+  
+  script(src="/javascripts/jquery-1.11.1.min.js")
+  script(src="/javascripts/bootstrap.min.js")
+  script(src="/javascripts/prettify.js")
+  script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")

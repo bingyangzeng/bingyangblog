@@ -1,0 +1,24 @@
+extends layout
+block content
+  div(class="container")
+   a(class="btn btn-primary",data-toggle="modal",href="#login")点击登录
+   div(class="modal hide fade",id="login")
+    div(class="modal-header")
+    a(href="#",class="close",data-dismiss="modal")关闭
+    h4用户登录 
+    div(class="modal-body")
+     form(class="form-horizontal")
+      div(class="control-group")
+       label(class="control-label") 用户名
+       div(class="controls")
+        input(type="text")
+      div(class="control-group")
+       label(class="control-label") 密码
+       div(class="controls")
+        input(type="text")
+    div(class="modal-footer")
+     button(type="button",class="btn btn-primary") 登录
+  script(src="/javascripts/jquery-1.11.1.min.js")
+  script(src="/javascripts/bootstrap.min.js")
+  script(src="/javascripts/prettify.js")
+  script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")

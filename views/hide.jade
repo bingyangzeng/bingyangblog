@@ -1,0 +1,24 @@
+extends layout
+block content
+  div(class="container")
+   h1(class="page-header")折叠内容
+   div(class="accordion",id="accordion1")
+    div(class="accordion-group")
+     div(class="accordion-heading")
+      a(class="accordion-toggle",href="#collapse1",data-toggle="collapse",data-parent="#accordion1")显示内容一
+     div(class="collapse in" id="collapse1")
+      div(class="accordion-inner") hellohelldffffffffffff
+    div(class="accordion-group")
+     div(class="accordion-heading")
+      a(class="accordion-toggle",href="#collapse2",data-toggle="collapse",data-parent="#accordion1")显示内容一
+     div(class="collapse " id="collapse2")
+      div(class="accordion-inner") hellohelldffffffffffff
+    div(class="accordion-group")
+     div(class="accordion-heading")
+      a(class="accordion-toggle",href="#collapse3",data-toggle="collapse",data-parent="#accordion1")显示内容一
+     div(class="collapse " id="collapse3")
+      div(class="accordion-inner") hellohelldffffffffffff
+  script(src="/javascripts/jquery-1.11.1.min.js")
+  script(src="/javascripts/bootstrap.min.js")
+  script(src="/javascripts/prettify.js")
+  script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")

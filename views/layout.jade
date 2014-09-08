@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= title
+    //link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min.css')
+    meta(name="viewport",content="width=device-width,initial-scale=1.0")
+    //style
+     include ../public/stylesheets/index.css
+    link(rel='stylesheet', href='/stylesheets/prettify.css')
+  body(onload="prettyPrint()")
+     div(class="alert alert-error")= error
+ 
+   div(class="navbar navbar-fixed-top")
+    div(class="navbar-inner")
+     div(class="container")
+      a(class="btn btn-navbar",data-toggle="collapse",data-target=".nav-collapse") <span class="icon-bar">1</span><span class="icon-bar">2</span><span class="icon-bar">3</span>
+      a(class="brand",href="/") bingyangblog
+      div(class="nav-collapse")
+       ul(class="nav")
+        li(class="active")
+         a(href="/")首页
+        li
+         a(href="/login")登入
+        li
+         a(href="/reg")注册
+   div(id="container",class="container")
+    block content
+    footer
+     p <a href="/" target="_blank">BingyangBlog</a>

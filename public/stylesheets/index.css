@@ -1,0 +1,2 @@
+body{background:#000;}
+@media(max-width:767px){body{background:#f00;}}
