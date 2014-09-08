@@ -1,6 +1,6 @@
 /* GET home page. */
-var crypto = require('crypto'),
-    User   = require('../models/user.js');
+    var crypto   = require('crypto');
+    var User   = require('../modules/user.js');
 
 exports.index = function(req, res){
   res.render('index', { title: '首页' });
@@ -10,18 +10,16 @@ exports.user = function(req, res){
 exports.post = function(req, res){
 };
 exports.reg = function(req, res){
-    var error1  = req.session.error1?req.session.error1:null;
-    var success = req.flash('success')?req.flash('success').toString():null;
-    console.log('start1')
-    console.log(error1);
-    console.log(req.session)
-    res.render('reg',{title:'用户注册',error:error1,success:success});
+    var error  = req.flash('error');
+    var success = req.flash('success');
+    //console.log('error2:'+req.flash('error'));
+    res.render('reg',{title:'用户注册',error:error,success:success});
 };
 exports.doReg = function(req, res){
   var name = req.body.username,
       password = req.body.password,
-      password_re = req.body['passwordrepeat'];
-  if( passwordrepeat != password_re ){
+      password_re = req.body.passwordrepeat;
+  if( password != password_re ){
 	req.flash('error','二次输入的口令不一致');
 	return res.redirect('/reg');
   }
@@ -47,7 +45,7 @@ exports.doReg = function(req, res){
 		res.redirect('/');
 	});
   });
-});
+};
 
 exports.login = function(req, res){
 };

@@ -64,6 +64,8 @@ if (app.get('env') === 'development') {
     });
 }
 
+
+
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
@@ -72,10 +74,26 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
+/*app.dynamicHelpers({
+	user:function(req,res){
+
+	},
+	error:function(req,res){
+
+	},
+	success:function(req,res){
+
+	}
+});*/
 app.use(function(req,res,next){
-    res.locals.user = req.session?req.session.user:'';
-    res.locals.error= req.flash('error')?req.flash('error'):'';
-    res.locals.success = req.flash('success')?req.flash('success'):'';
+//    res.locals.user = req.session?req.session.user:'';
+    console.log('---star-----\n');
+    console.log(req);
+    console.log('---center-----\n');
+    console.log(res);
+    console.log('---end-----\n');
+    res.locals.error= req.flash('error');
+    res.locals.success = req.flash('success');
 });
 
 
